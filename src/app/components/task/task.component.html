@@ -1,0 +1,15 @@
+<div  [ngClass]="
+{
+'info-task': task.level === 0,
+'urgent-task': task.level === 1, 
+'bloquing-task': task.level === 2 ,
+'completed-task': task.completed
+
+}"> 
+{{task.title}}  <button mat-raised-button color="primary" style="margin-left: 20px" (click)="showDetails()">{{details? 'ocultar detalles':'mostrar detalles'}}</button> 
+
+  <div *ngIf="details" style="color:red"> 
+    {{task.desciption}}
+
+    </div>
+  </div>

@@ -30,6 +30,7 @@ import { DasboardComponent } from './pages/dasboard/dasboard.component';
 import { TasksPageComponent } from './pages/tasks-page/tasks-page.component';
 import { KambanTaskComponent } from './components/kamban-task/kamban-task.component';
 import { DragDropModule } from '@angular/cdk/drag-drop';
+import { TaskComponent } from './components/task/task.component';
 
 
 
@@ -49,7 +50,8 @@ import { DragDropModule } from '@angular/cdk/drag-drop';
     NavComponent,
     DasboardComponent,
     TasksPageComponent,
-    KambanTaskComponent
+    KambanTaskComponent,
+    TaskComponent
   ],
   imports: [
     BrowserModule,
