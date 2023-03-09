@@ -1,0 +1,25 @@
+.ColorRojo{
+    color: red;
+    font-size: 20px;
+}
+.verde{
+    color: green;
+    font-size: 25px;
+    
+}
+
+#cerrarSesion{
+    display: inline-flex;
+   cursor: pointer;
+   transition:  .3 easy all;
+
+   
+}
+.container{
+    align-self: auto;
+    text-align: center;
+    margin-left: 3%;
+    margin-top: 2%;
+    height: 100%;
+    width: 100%;
+}

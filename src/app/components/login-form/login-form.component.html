@@ -1,0 +1,50 @@
+<!--Montamos ellogin form haciendo uso de componentes material-->
+
+<mat-card>
+
+<!--Cabecera-->
+<mat-card-header>
+    <mat-card-title>
+        Login
+    </mat-card-title>
+        <mat-card-subtitle>
+            accede a tu cuenta
+        </mat-card-subtitle>
+</mat-card-header>
+
+
+<!--contenido-->
+<mat-card-content>
+    <!--formulario de login-->
+    <form [formGroup]="loginForm" (submit)="submitLogin()">
+        <mat-form-field>
+            <input matInput placeholder="Email" formControlName="email">
+            <mat-error *ngIf="email?.errors?.['required'] && email?.touched">
+                El campo email es obligatorio
+            </mat-error>
+            <mat-error *ngIf="email?.errors?.['email'] && email?.touched">
+                El formato del email no es correcto
+            </mat-error>
+        </mat-form-field>
+
+        <mat-form-field>
+            <input type="password" matInput placeholder="Password" formControlName="password">
+            <mat-error *ngIf="password?.errors?.['required'] && password?.touched">
+                El campo password es obligatorio
+            </mat-error>
+            <mat-error *ngIf="password?.errors?.['password'] && password?.touched">
+                El formato del password no es correcto
+            </mat-error>
+        </mat-form-field>
+
+            <!--Boton para hacer submit del formulario-->
+        <button type="submit" mat-raised-button color="primary" [disabled]="loginForm.invalid" >Enviar formulario</button>
+    </form>
+
+    <!--deje a los 25:30 mitos restantes-->
+
+
+
+</mat-card-content>
+
+</mat-card>

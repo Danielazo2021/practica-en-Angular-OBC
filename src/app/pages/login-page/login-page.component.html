@@ -1,0 +1,20 @@
+
+<!--Formulario Login viejo, fue remplazado por el login form de Angular material
+
+Email: <input type="text" [(ngModel)]="email">
+<br>
+Password: <input type="text" [(ngModel)]="password">
+<br><br>
+
+<div>
+<button (click)="loguearse(email, password)">Iniciar sesión</button>  
+
+</div>
+-->
+
+
+    <!--renderizamos el login form-->
+    <app-login-form (loginAction)="loguearse($event)"></app-login-form><small> 
+        
+        "email": "eve.holt@reqres.in",
+        "password": "cityslicka"</small>

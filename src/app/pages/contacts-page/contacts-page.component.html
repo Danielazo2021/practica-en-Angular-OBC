@@ -1,0 +1,100 @@
+<h1>Tus contactos:</h1>
+<div *ngIf="loading">
+<mat-spinner></mat-spinner>
+<h6>cargando...</h6>
+</div>
+<div *ngIf="filtroSexo=='female'" >
+        <div *ngFor="let contacto of listaRandomContacts; let i = index" >
+            <div *ngIf="contacto.gender=='female'">
+            <div  routerLink="{{contacto.id.name}}"[state]="{data: contacto, filtro: filtroSexo}">
+        
+                <div>
+                <div id="navega">
+                    <h4 > {{i+1}} - {{contacto.name.first}}, {{contacto.name.last}} <small>(presiona sobre el contacto para ver el detalle)</small></h4>
+                </div>
+            </div>
+            <button mat-raised-button color='primary' (click)="VolverAHome(contacto)">Enviar contacto</button>
+        </div>
+        </div>
+    </div>
+</div>
+
+<div *ngIf="filtroSexo=='male'" >
+    <div *ngFor="let contacto of listaRandomContacts; let i = index" >
+        <div *ngIf="contacto.gender=='male'">
+        <div  routerLink="{{contacto.id.name}}"[state]="{data: contacto, filtro: filtroSexo}">
+    
+            <div>
+            <div id="navega">
+                <h4 > {{i+1}} - {{contacto.name.first}}, {{contacto.name.last}}</h4>
+            </div>
+        </div>
+        <button mat-raised-button color='primary' (click)="VolverAHome(contacto)">Enviar contacto</button>
+    </div>
+    </div>
+</div>
+</div>
+
+<div *ngIf="filtroSexo== 'todos'" >
+<div *ngFor="let contacto of listaRandomContacts; let i = index" >
+
+    <div  routerLink="{{contacto.id.name}}"[state]="{data: contacto, filtro: filtroSexo}">
+
+        <div>
+        <div id="navega">
+            <h4 > {{i+1}} - {{contacto.name.first}}, {{contacto.name.last}}</h4>
+        </div>
+    </div>
+    <button mat-raised-button color='primary' (click)="VolverAHome(contacto)">Enviar contacto</button>
+</div>
+</div>
+</div>
+
+<!--Listar los contactos y poder navegar al pinchar sobre uno de ellos y navegar al detalle
+-->
+<div>
+
+
+<div *ngFor="let contacto of listaContacto; let i = index" >
+
+                    <div *ngIf="(contacto.sexo == filtroSexo )">
+
+                        <div  routerLink="{{contacto.id}}"[state]="{data: contacto, filtro: filtroSexo}">
+                        <div id="navega">
+                            <h4 > {{i+1}} - {{contacto.nombre}}, {{contacto.apellido}} <small>(presiona sobre el contacto para ver el detalle)</small></h4>
+                        </div>
+                        <button mat-raised-button color='primary' (click)="VolverAHome(contacto)">Enviar contacto</button>
+
+                    </div>
+                </div>
+
+    <div *ngIf="(filtroSexo == 'todos')">
+        <div  routerLink="{{contacto.id}}"[state]="{data: contacto, filtro: filtroSexo}">
+            <div id="navega">
+                <h4 > {{i+1}} - {{contacto.nombre}}, {{contacto.apellido}} <small>(presiona sobre el contacto para ver el detalle)</small></h4>
+            </div>
+            <button mat-raised-button color='primary' (click)="VolverAHome(contacto)">Enviar contacto</button>
+
+        </div>
+    
+    </div>
+               
+</div>
+
+   
+
+
+<hr><hr>
+<br>
+<button mat-raised-button color="primary" (click)="IrAHome()">Volver a Home contacto</button>
+
+<div>
+    <ng-container *ngIf = "filtroSexo == 'male' || filtroSexo == 'female' ; else Completo">
+       
+        <h3>Mostrando el filtro {{filtroSexo}}</h3>  
+    </ng-container>
+
+    <ng-template #Completo>
+        <h3>Mostrando la lista completa</h3>
+    </ng-template>
+</div>

@@ -1,0 +1,38 @@
+
+<div class="container">
+<h1>Juego del amigo invisible</h1>
+
+<h3>Bienvenido!</h3>
+
+<a *ngIf="!identificado"  routerLink="/login"> Iniciar sesión</a>
+
+<br>
+
+<div *ngIf="contacto">
+<div ngClass="ColorRojo" *ngIf="contacto">
+   Tu amigo invisible es:  
+   <br>
+   Id: {{contacto.id.name}} - 
+    {{contacto | nombreCompleto }}, <br>
+    y su email es <span ngClass="verde"> {{contacto.email}}</span>
+</div>
+</div>
+
+
+<br>    
+<div *ngIf="identificado">
+    <div>
+<button mat-raised-button color="primary" (click)="irContactos()">Ver todos</button>
+<span style="color: white" >    |  </span>
+<button mat-raised-button color="primary"  (click)="irContactosAleatoreos()">Contacto random</button>
+</div>
+<br>
+<br>
+<p>Filtros: </p>
+
+<div>
+<a [routerLink]="['/dashboard/contacts']" [queryParams]="{sexo:'female'}"> Seleccionar Amigas </a><br>
+<a [routerLink]="['/dashboard/contacts']" [queryParams]="{sexo:'male'}">Seleccionar Amigos</a>
+</div>
+</div>
+</div>

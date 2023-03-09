@@ -1,0 +1,13 @@
+<app-random-user [randomContact]="contact"></app-random-user>
+<br>
+<br>
+
+<button mat-raised-button color="primary" (click)="obtenerNuevoContacto()">Generear contacto aleatrorio</button>
+<br>
+<br>
+<br>
+ingrese la cantidad de contactos para generar la lista aleatoria
+<input type="text" [(ngModel)]="cantidad" >
+<br>
+<button mat-raised-button color="primary" (click)="obtenerListaContactos(cantidad)">Generear Lista de contacto aleatrorio</button>
+

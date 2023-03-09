@@ -1,0 +1,24 @@
+<div>
+<h1>Contacto id: {{id}} </h1>
+
+<div *ngIf="!contacto">ERROR!!
+    Solo muestra los datos si no tenian aplicado previamente un filtro ya que cambia la url de donde saca losdatos</div>
+<div *ngIf="contacto">
+    
+    <h1>Nombre completo con pipe: {{contacto | nombreCompleto}} </h1>
+<h1 >Nombre: {{contacto.name.first | uppercase}} </h1>
+<h2>Apellido: {{contacto.name.last | lowercase}} </h2>
+<h2>Sexo: {{contacto.gender}} </h2>
+<h3>Email: {{contacto.email}} </h3>
+</div>
+</div>
+
+
+<!--lo remplace por el link de abajo
+    <button (click)="VolverContactos()">Ir a todos los contactos</button><br>-->
+<button mat-raised-button color="primary" (click)="VolverHome()">Ir ala Home</button>
+
+<!--podria usar otra forma de navegar cn el router link
+
+-->
+<button mat-raised-button color="basic"><a routerLink="/dashboard/contacts" [queryParams]="{sexo: filtroPrevio}"> Volver </a></button>

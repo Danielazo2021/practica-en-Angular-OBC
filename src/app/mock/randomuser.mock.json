@@ -1,0 +1,66 @@
+{
+    "results": [
+        {
+            "gender": "male",
+            "name": {
+                "title": "Mr",
+                "first": "Oliver",
+                "last": "Wright"
+            },
+            "location": {
+                "street": {
+                    "number": 7251,
+                    "name": "Te Atatu Road"
+                },
+                "city": "Upper Hutt",
+                "state": "Nelson",
+                "country": "New Zealand",
+                "postcode": 16139,
+                "coordinates": {
+                    "latitude": "51.4961",
+                    "longitude": "-147.2376"
+                },
+                "timezone": {
+                    "offset": "+2:00",
+                    "description": "Kaliningrad, South Africa"
+                }
+            },
+            "email": "oliver.wright@example.com",
+            "login": {
+                "uuid": "cf8bdd71-aa60-4cb3-bb39-25db9b0f786d",
+                "username": "bluemeercat217",
+                "password": "qqqqqq",
+                "salt": "NQAaYQnU",
+                "md5": "ba42503cab096abe4085a8676476ac20",
+                "sha1": "5c9feee43db0b36742b5d60e3811cff4abc437d2",
+                "sha256": "ee0fe516c37a3f77742d894d9d5f412b0f62618994bf745df0f4e9286a134bff"
+            },
+            "dob": {
+                "date": "1963-03-26T17:28:33.054Z",
+                "age": 59
+            },
+            "registered": {
+                "date": "2019-08-10T16:03:48.858Z",
+                "age": 3
+            },
+            "phone": "(670)-945-3833",
+            "cell": "(652)-121-5093",
+            "id": {
+                "name": "",
+                "value": null
+            },
+            "picture": {
+                "large": "https://randomuser.me/api/portraits/men/69.jpg",
+                "medium": "https://randomuser.me/api/portraits/med/men/69.jpg",
+                "thumbnail": "https://randomuser.me/api/portraits/thumb/men/69.jpg"
+            },
+            "nat": "NZ"
+        }
+    ],
+    "info": {
+        "seed": "0279e7d10b957c8c",
+        "results": 1,
+        "page": 1,
+        "version": "1.4"
+    }
+}
